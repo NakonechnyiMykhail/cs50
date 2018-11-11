@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    // Prompt user for x
+    // Prompt user for xmake
     float x = get_float("x: ");
 
     // Prompt user for y
@@ -13,4 +13,6 @@ int main(void)
 
     // Perform division
     printf("%f divided by %f is %f\n", x, y, x / y);
+
+    return 0;
 }
