@@ -6,18 +6,21 @@
 int main(void)
 {
     // Prompt user for answer
-    char c = get_char("answer: ");
+    char c[30];
+    for(int i = 0; i < 30; i++){
+        c[i] = get_char();
+    }
 
     // Check answer
-    switch (c)
+    switch (char* c)
     {
-        case 'Y':
-        case 'y':
+        case 'Yes':
+        // case 'y':
             printf("yes\n");
             break;
-        case 'N':
-        case 'n':
-            printf("no\n");
-            break;
+        // case 'N':
+        // case 'n':
+        //     printf("no\n");
+        //     break;
     }
 }

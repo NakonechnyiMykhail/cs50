@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void cough(int n);
+void cough(int counter);
 
 int main(void)
 {
@@ -10,9 +10,9 @@ int main(void)
 }
 
 // Cough some number of times
-void cough(int n)
+void cough(int counter)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < counter; i++)
     {
         printf("cough\n");
     }
