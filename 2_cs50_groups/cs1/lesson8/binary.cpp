@@ -7,6 +7,7 @@ int binarySearch (int arr[], int l, int r, int x)
     if (r >= l)
     {
         int mid = l + (r - l) / 2;
+        cout << mid << endl;
         if (arr[mid] == x) return mid;
 
         if ( arr[mid] > x )
@@ -28,9 +29,12 @@ int main ()
 
     int result = binarySearch(arr, 0, n-1, x);
 
+    //cout << sizeof(arr[0]) << endl;
+
+
     if(result == -1)
         cout << "Element not found\n";
     else
-        cout << "Element found at index: " << result;
+        cout << "Element found at index: " << result << endl;
     return 0;
 }
