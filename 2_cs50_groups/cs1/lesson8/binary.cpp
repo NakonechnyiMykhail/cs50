@@ -7,7 +7,7 @@ int binarySearch (int arr[], int l, int r, int x)
     if (r >= l)
     {
         int mid = l + (r - l) / 2;
-        cout << mid << endl;
+        //cout << mid << endl;
         if (arr[mid] == x) return mid;
 
         if ( arr[mid] > x )
