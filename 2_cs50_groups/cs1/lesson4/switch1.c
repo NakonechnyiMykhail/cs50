@@ -6,13 +6,13 @@
 int main(void)
 {
     // Prompt user for answer
-    int number = get_int("answer: ");
+    int number = get_char("answer: ");
 
     // Check answer
     switch (number)
     {
-        case 1:
-            printf("output 1\n");
+        case 'Y':
+            printf("YES");
         case 'y':
             printf("yes\n");
             break;
