@@ -42,7 +42,7 @@ int main(void){
         printf("Middle, %i years\n", years);
     } else if(years >= 50 && years <= 89) {
         printf("Older, %i years\n", years);
-    } else if(years >= 90 & years <= 117) {
+    } else if(years >= 90 && years <= 117) {
         printf("You are SuperMan, %i years\n", years);
     } else {
         printf("Sorry, we can not help you now! Try again later!\n");
