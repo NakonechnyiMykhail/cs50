@@ -23,7 +23,7 @@ int main(void){
             printf("Please, enter the current year between 1900 and %d \n Year of your birthday: ", currentYear);
         }
         scanf("%i", &years);
-        i++;
+        counter++;
     } while(years < 1900 && years <= currentYear && counter < 3); // add exception to i <5 another throw -> so many times
 
     // add exception to varieble "year" > 0 another throw "negative year"
