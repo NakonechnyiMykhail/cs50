@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     }
 
     //Get the text to encrypt
-    string plntxt = get_string();
+    string plntxt = get_string("Get the message: \n");
     if (plntxt != NULL)
     {
         //Encrypt and print
@@ -58,9 +58,9 @@ int main(int argc, string argv[])
                     printf("%c", plntxt[i]);
                     j--;
                 }
-            }
         }
-        printf("\n");
+    }
+    printf("\n");
 
     return 0;
 }
