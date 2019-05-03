@@ -27,7 +27,7 @@ int main()
 		else if(ch >= 'A' && ch <= 'Z'){
 			ch = ch - key;
 
-			if(ch > 'a'){
+			if(ch < 'A'){
 				ch = ch + 'Z' - 'A' + 1;
 			}
 

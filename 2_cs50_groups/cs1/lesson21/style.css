@@ -1,0 +1,13 @@
+body {
+	background-color: lightblue;
+}
+
+/* Селектор для іменованого блока, встановлює колір */
+#pretty_color {
+	color: purple;
+}
+
+/* Селектор для класу - встановлює шрифт */
+.pretty_font {
+  font-family: "Brush Script MT", cursive;
+}
