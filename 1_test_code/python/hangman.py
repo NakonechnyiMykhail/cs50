@@ -67,11 +67,57 @@ def displayBoard(missedLetters, correctLetters, secretWord):
     print()
 
 
+def getGuess(alreadyGuessed):
+    #возвращает символ, который ввел пользователь
+    while True:
+        print('Введите букву:')
+        guess = input()
+        guess = guess.lower()
+        if len(guess) != 1:
+            print('Пожалуйста, введите одну букву')
+        elif guess in alreadyGuessed:
+            print('Вы уже называли эту букву. Назовите другую')
+        elif guess not in 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя':
+            print('Пожалуйста, введите БУКВУ.')
+        else:
+            return guess
 
+def playAgain():
+    print('Хотите сыграть ещё? (да / нет)')
+    return input().lower().startswith('д')
 
 print('H A N G M A N')
 missedLetters = ''
 correctLetters = ''
 secretWord = getRandomWord(words)
+gameIsDone = False
 
-displayBoard(missedLetters, correctLetters, secretWord)
+while True:
+    displayBoard(missedLetters, correctLetters, secretWord)
+    guess = getGuess(missedLetters + correctLetters)
+    if guess in secretWord:
+        correctLetters = correctLetters + guess
+        foundAllLetters = True
+        for i in range(len(secretWord)):
+            if secretWord[i] not in correctLetters:
+                foundAllLetters = False
+                break
+        if foundAllLetters:
+            print('Секретное слово - "'+secretWord+'"! Вы угадали!')
+            gameIsDone = True
+    else:
+        missedLetters = missedLetters + guess
+
+        if len(missedLetters) == len(HANGMAN_PICS)-1:
+            displayBoard(missedLetters, correctLetters, secretWord)
+            print('Вы исчерпали все попытки!\n Неугадано букв:'+str(len(missedLetters))+'и угадано букв:'+str(len(correctLetters))+'. Было загадано слово:"'+secretWord+'".')
+            gameIsDone = True
+
+    if gameIsDone:
+        if playAgain():
+            missedLetters = ''
+            correctLetters = ''
+            secretWord = getRandomWord(words)
+            gameIsDone = False
+        else:
+            break
