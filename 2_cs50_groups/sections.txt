@@ -1,0 +1,21 @@
+Лекции:
+1. Java                             Da4  R1  Di1
+2. C#                               Da2 R2
+3. Android app
+4. Unity 3D game (C#)               N   G
+5. Machine Learning                 Da3 Di2
+
+
+
+Java / Java+ML(50/50)
+C# + Unity 3D game
+
+
+
+6. Django Framework (python)
+7. Quantum Computers
+8. PHP + MySQL / Wordpress blog
+9. Information Security             Da1
+10. Quality Assurance (QA)
+11. Data structure (c++)            G2
+12. Algorithms (c++)                G3
