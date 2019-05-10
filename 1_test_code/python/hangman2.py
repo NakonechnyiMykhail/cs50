@@ -35,7 +35,17 @@ HANGMAN_PICS = ['''
   0   |
  /|\  |
  / \  |
-     ===''',]
+     ===''', '''
+  +---+
+ [0   |
+ /|\  |
+ / \  |
+     ===''', '''
+  +---+
+ [0]   |
+ /|\  |
+ / \  |
+     ===''']
 
 
 words = {'Животные':'аист акула бабуин баран барсук бобр бык верблюд волк воробей ворон выдра голубь гусь жаба зебра змея индюк кит кобра коза козел койот корова кошка кролик крыса курица лама ласка лебедь лев лиса лосось лось лягушка медведь моллюск моль мул муравей мышь норка носорог обезьяна овца окунь олень орел осел панда паук питон попугай пума семга скунс собака сова тигр тритон тюлень утка форель хорек черепаха ястреб ящерица'.split(),
@@ -45,11 +55,14 @@ words = {'Животные':'аист акула бабуин баран бар�
 
 
 
-def getRandomWord(wordList):
-    wordIndex = random.randint(0, len(wordList)-1)
-    return wordList[wordIndex]
+def getRandomWord(wordDict):
+    wordKey = random.choice(list(wordDict.keys()))
+    print(wordKey)
+    wordIndex = random.randint(0, len(wordDict[wordKey])-1)
+    # print(wordIndex)
+    return wordDict[wordKey][wordIndex]
 
-# print(getRandomWord(words))
+print(getRandomWord(words))
 
 def displayBoard(missedLetters, correctLetters, secretWord):
     print(HANGMAN_PICS[len(missedLetters)])
@@ -91,12 +104,31 @@ def playAgain():
     return input().lower().startswith('д')
 
 print('H A N G M A N')
+
+difficulty = ''
+
+while difficulty not in 'ЛСТ':
+    print('Выберите уровень сложности: Л - легкий, С - средний, Т - тяжелый')
+    difficulty = input().upper()
+if difficulty == 'С':
+    del HANGMAN_PICS[8]
+    del HANGMAN_PICS[7]
+if difficulty == 'Т':
+    del HANGMAN_PICS[8]
+    del HANGMAN_PICS[7]
+    del HANGMAN_PICS[5]
+    del HANGMAN_PICS[3]
+
+
 missedLetters = ''
 correctLetters = ''
+# secretWord, secretSet = getRandomWord(words)
 secretWord = getRandomWord(words)
+secretSet = getRandomWord(words)
 gameIsDone = False
 
 while True:
+    print('Секретное слово из набора: ' + secretSet)
     displayBoard(missedLetters, correctLetters, secretWord)
     guess = getGuess(missedLetters + correctLetters)
     if guess in secretWord:
@@ -122,6 +154,9 @@ while True:
             missedLetters = ''
             correctLetters = ''
             secretWord = getRandomWord(words)
+            secretSet = getRandomWord(words)
             gameIsDone = False
         else:
             break
+
+
