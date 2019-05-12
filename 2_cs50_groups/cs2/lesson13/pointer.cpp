@@ -4,9 +4,11 @@ using namespace std;
 
 int main (void)
 {
-
     int count = 5;
     int *p_count;
+    // a
+    // int* pa
+    // ptr_a
 
     p_count = &count;
 

@@ -1,16 +1,12 @@
-Лекции:
+Лекции: grA
 1. Java                             Da4  R1  Di1
 2. C#                               Da2 R2
 3. Android app
 4. Unity 3D game (C#)               N   G
 5. Machine Learning                 Da3 Di2
 
-
-
 Java / Java+ML(50/50)
 C# + Unity 3D game
-
-
 
 6. Django Framework (python)
 7. Quantum Computers
@@ -19,3 +15,26 @@ C# + Unity 3D game
 10. Quality Assurance (QA)
 11. Data structure (c++)            G2
 12. Algorithms (c++)                G3
+
+Лекции: grB
+1. Java                             A   O
+2. C#                               A   O
+3. Android app                      M   O   V
+4. Unity 3D game (C#)               O   M   A   V
+
+
+Java+
+Android app (40/60)
+C# +
+Unity 3D game (25/75)
+
+
+
+5. Machine Learning
+6. Django Framework (python)
+7. Quantum Computers
+8. PHP + MySQL / Wordpress blog
+9. Information Security             M
+10. Quality Assurance (QA)
+11. Data structure (c++)
+12. Algorithms (c++)
