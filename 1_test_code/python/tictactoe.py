@@ -84,13 +84,12 @@ def getBotMove(board, botLetter):
             makeMove(boardCopy, playerLetter, i)
             if isWinner(boardCopy, playerLetter):
                 return i
+    if isSpaceFree(board, 5):
+        return 5
 
     move = chooseRandomMoveFromList(board, [1, 3, 7, 9])
     if move != None:
         return move
-
-    if isSpaceFree(board, 5):
-        return 5
 
     return chooseRandomMoveFromList(board, [2, 4, 6, 8])
 
@@ -106,7 +105,7 @@ while True:
     theBoard = [' '] * 10
     playerLetter, botLetter = inputPlayerLetter()
     turn = whoGoesFirst()
-    print('' + turn + ' goes first.')
+    print('\n' + turn + ' goes first.')
     gameIsPlaying = True
 
     while gameIsPlaying:
