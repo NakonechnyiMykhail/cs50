@@ -108,7 +108,7 @@ def logout():
     session.clear()
 
     # Redirect user to login form
-    return redirect("/")
+    return redirect("tamplates/layout")
 
 
 @app.route("/quote", methods=["GET", "POST"])
@@ -120,7 +120,31 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """Register user"""
+
+
+   if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+            rows = db.execute("SELECT * FROM users WHERE username = :username",
+                          username=request.form.get("username"))
+
+        # Ensure username exists and password is correct
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+            return apology("invalid username and/or password", 403)
+              return redirect("/")
+
+    if not request.form.get("name") or not request.form.get("password"):
+        return render_template("failure.html")
+
+        with open("users.csv", "a") as file:
+        writer = csv.DictWriter(file, fieldnames=["name", "password"])
+        writer.writerow({"name": request.form.get("name"), "password": request.form.get("password")})
+
+    return render_template("portfolio.html")
     return apology("TODO")
 
 

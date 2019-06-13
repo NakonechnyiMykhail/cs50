@@ -1,0 +1,100 @@
+#first {
+	background: #0066cc;
+	font-size: 40px;
+	text-align: center;
+	border: 2px solid black;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+
+#second {
+	width: 300px;
+	height: 1000px;
+	padding: 4px;
+	margin: 4px;
+	border: 2px solid;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+	background: linear-gradient(to bottom, #0066cc 0%, #9900cc 100%); 
+	float: left; 
+}
+
+#third {
+	width: 300px;
+	height: 1000px;
+	padding: 4px;
+	margin: 4px;
+	border: 2px solid;
+	font-size: 20px;
+	text-align: center;
+	background: linear-gradient(to bottom, #0066cc 0%, #9900cc 100%); 
+	float: right; 
+	border-radius: 10px;
+}
+
+#fourtht {
+	width: 489px ;
+	height: 1015px ;
+	padding: 99px;
+	margin: 315px;
+	border: 1px solid;
+	font-size: 15px ;
+	text-align: center; 
+    border-radius: 10px;
+	display: flex;
+	display: table-cell;
+	background: linear-gradient(to bottom, #0066cc 0%, #9900cc 100%);
+	
+}
+
+#down {
+	width: 1500px ;
+	height: 400px ;
+	padding: 99px;
+	margin: 315px;
+	border: 1px solid;
+	font-size: 16px ;
+	text-align: center; 
+	justify-content: center;
+	border-radius: 10px;
+	display: flex;
+	display: table-cell;
+	background:  linear-gradient(to top, #0066cc 0%, #9900cc 100%);
+	
+}
+
+#footer {
+	width:  ;
+	height: 30px ;
+	padding: 4px;
+	margin: 4px;
+	border: 2px dashed ;
+	background: linear-gradient(to bottom, #0066cc 0%, #9900cc 100%);
+	color: ;
+	font-size: 15px ;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+    border-radius: 10px;
+	
+	
+}
+
+p {
+	text-align: left;
+	float: left;
+	font-size: 15px;
+	overflow: auto;
+}
+
+a {
+	color: #800000;
+}
+
+table {
+	padding: 17px;
+	margin: 30px;
+	border: 1px dashed;
+}
