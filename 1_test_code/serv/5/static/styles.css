@@ -1,0 +1,33 @@
+a:hover {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+/* colors for brand */
+nav .brand-logo .blue-letter
+{
+    color: #1252ad;
+}
+nav .brand-logo .red-letter
+{
+    color: #b10700;
+}
+nav .brand-logo .yellow-letter
+{
+    color: #f5b82e;
+}
+nav .brand-logo .green-letter
+{
+    color: whitesmoke;
+}
+
+form {
+    width: 30%;
+    margin: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
