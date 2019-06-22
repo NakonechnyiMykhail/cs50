@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post" name="registration" class="center-align">
+        <div class="input-field">
+            <input autocomplete="off" autofocus name="username" type="text">
+            <label for="username">Username</label>
+            <div class="invalid-feedback">
+                Username already taken
+            </div>
+        </div>
+        <div class="input-field">
+            <input name="password" type="password">
+            <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+            <input name="password_confirmation" type="password">
+            <label for="password_confirmation">Confirm password</label>
+            <div class="invalid-feedback">
+                You must enter the same password
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit">Register</button>
+    </form>
+
+    <script>
+        document.registration.addEventListener('submit', function(event) {
+            event.preventDefault()
+            $.get(`/check?username=${this.username.value}`, data => {
+                if (!data) return this.username.classList.add('is-invalid')
+                if (this.password.value != this.password_confirmation.value) {
+                    return this.password_confirmation.classList.add('is-invalid')
+                }                     
+                this.submit()
+            })
+        })
+    </script>
+{% endblock %}
